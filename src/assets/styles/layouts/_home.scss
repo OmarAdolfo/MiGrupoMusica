@@ -132,3 +132,89 @@
     }
   }
 }
+
+.new {
+
+  width: 80%;
+  margin: 25px auto;
+
+  @media screen and (min-width: $laptop-large-viewport) {
+    width: 50%;
+  }
+  
+  @media screen and (min-width: $tablet-viewport) {
+    width: 70%;
+  }
+
+  &__photo {
+    display: block;
+
+    &--main {
+      width: 100%;
+      height: 400px;
+    }
+
+    &--secondary {
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  &__separator {
+    border: 1px solid black;
+  }
+
+  &__paragraph {
+    margin: 40px;
+    text-align: justify;
+    
+    &--big-text {
+      font-size: 24px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+  }
+
+  &__list-tours {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    padding: 0 0 0 26px;
+    margin: 0 auto;
+    counter-reset: number;
+  }
+
+  &__tour {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 10px;
+
+    &::before {
+      position: absolute;
+      left: -26px;
+      float: left;
+      width: 18px;
+      height: 18px;
+      font: bold 12px sans-serif;
+      line-height: 18px;
+      text-align: center;
+      content: counter(number);
+      counter-increment: number;
+      border: 1px solid blue;
+      border-radius: 50%;
+    }
+  }
+
+  &__block-dual-paragraph {
+    display: flex;
+    flex-direction: row;
+  }
+}
