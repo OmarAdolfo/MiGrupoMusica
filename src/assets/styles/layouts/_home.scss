@@ -93,20 +93,38 @@
 }
 
 .paragraph {
-  max-width: 75%;
+  max-width: 60%;
   margin: 25px auto;
   line-height: 1.5;
   text-align: justify;
 }
 
 .member {
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
 
   &__photo {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    box-shadow: 18px 14px 12px -10px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 100;
+    color: #3F51B5;
+  }
+
+  &__rol {
+    color:#7986CB
+  }
+
+  &__info {
+    margin-top: 15px;
+    text-align: justify;
   }
 }
 
@@ -115,20 +133,17 @@
 .flex {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
 
   &__item {
     width: 100%;
 
     @media (min-width: $tablet-viewport) {
-      & {
-        width: 50%;
-      }
+      width: 50%;
     }
     
     @media (min-width: $laptop-large-viewport) {
-      & {
-        width: 33.3%;
-      }
+      width: 33.3%;
     }
   }
 }
