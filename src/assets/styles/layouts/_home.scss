@@ -1,3 +1,4 @@
+/* Clase asociada al body de la página */
 .page {
   display: flex;
   flex-direction: column;
@@ -7,25 +8,41 @@
   font-family: $font-family-roboto;
 }
 
+/* Cabecera de las páginas donde está situado el menú de navegación */
 .header {
   border-bottom: generate-border(7px, black);
 }
 
+/* Cuerpo de las páginas web y que se rellena de forma automática hasta ocupar toda la pantalla */
 .main {
   flex: auto;
 }
 
+/* Pie de página */
+.footer {
+  background-color: $color-secondary;
+  border-top: generate-border(7px, black);
+
+  &__paragraph {
+    max-width: 60%;
+    margin: 25px auto;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}
+
+/* Portada de la página diseñada con para aquellos navegadores que no soporten css grid y para vistas en móviles */
 .cover-page {
   padding: 3em;
 
   &__title {
     font-size: calc(2em + 4vw);
-    color: $color-blue;
+    color: $color-primary;
   }
 
   &__subtitle {
     font-size: calc(2em + 1vw);
-    color: $color-grey;
+    color: $color-secondary;
   }
   
   &__info {
@@ -36,7 +53,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: 3px solid black;
+    border: generate-border(3px, black);
     border-radius: 20px;
   }
 
@@ -51,6 +68,7 @@
   }
 }
 
+/* Soporte de css grid para aquellos navegadores que lo permitan */
 @supports (display:grid) {
   @media (min-width: $tablet-viewport) {
     .cover-page {
@@ -87,18 +105,7 @@
   }
 }
 
-.footer {
-  background-color: #e0d8d8;
-  border-top: generate-border(7px, black);
-}
-
-.paragraph {
-  max-width: 60%;
-  margin: 25px auto;
-  line-height: 1.5;
-  text-align: justify;
-}
-
+/* Clase para definir los estilos de un miembro de la banda */
 .member {
   width: 75%;
   margin: 0 auto;
@@ -115,11 +122,11 @@
   &__name {
     margin: 0;
     font-weight: 100;
-    color: $color-blue-main-text;
+    color: $color-primary;
   }
 
   &__rol {
-    color: $color-blue-main-text-secondary;
+    color: $color-primary-600;
   }
 
   &__info {
@@ -129,7 +136,6 @@
 }
 
 /* Clase utilitaria que nos permite aportar la propiedad flex y hacer responsiva la organización de la misma */
-
 .flex {
   display: flex;
   flex-flow: row wrap;
@@ -148,6 +154,7 @@
   }
 }
 
+/* Clase para definir los estilos de la noticia situada en la página de información */
 .new {
 
   width: 80%;
@@ -175,7 +182,7 @@
   }
 
   &__separator {
-    border: 1px solid black;
+    border: generate-border(1px, black);
   }
 
   &__paragraph {
@@ -234,11 +241,11 @@
       height: 18px;
       font: bold 12px sans-serif;
       line-height: 18px;
-      color: $color-blue-main-text;
+      color: $color-primary;
       text-align: center;
       content: counter(number);
       counter-increment: number;
-      border: 1px solid $color-blue-main-text;
+      border: generate-border(1px, $color-primary);
       border-radius: 50%;
     }
   }

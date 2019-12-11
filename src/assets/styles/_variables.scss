@@ -11,13 +11,17 @@ $num-total-col: 12;
 $tablet-viewport: 760px;
 $laptop-large-viewport: 1020px;
 
-/* Colores */
-$color-black: #424242;
-$color-grey: #bdbdbd;
-$color-blue: #007bff;
-$color-blue-main-text: #3f51b5;
-$color-blue-main-text-secondary: #7986cb;
+/* Colores basados en Material Design */
+$color-primary:#344955;
+$color-primary-600:#4a6572;
+$color-secondary:#f9aa33;
 
 /* Navbar Bootstrap */
 $navbar-dark-color: white;
-$navbar-dark-hover-color: #d4d4d4;
+$navbar-dark-hover-color: $color-secondary;
+
+/* Colores bootstrap */
+$theme-colors: (
+  "primary": $color-primary,
+  "secondary": $color-secondary
+);
