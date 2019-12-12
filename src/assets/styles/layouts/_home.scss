@@ -102,13 +102,13 @@
 
 /* Clase para definir los estilos de un miembro de la banda */
 .member {
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
 
   &__photo {
     width: 100%;
-    height: auto;
+    height: 200px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 18px 14px 12px -10px rgba(0, 0, 0, 0.75);
