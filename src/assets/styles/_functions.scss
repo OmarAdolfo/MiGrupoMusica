@@ -2,3 +2,8 @@
 @function generate-border($px, $color) {
   @return $px solid $color;
 }
+
+/* Función para generar anchos */
+@function column-width($col) {
+  @return percentage($col / 12);
+}

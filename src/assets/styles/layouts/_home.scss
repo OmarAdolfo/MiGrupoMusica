@@ -57,14 +57,9 @@
     border-radius: 20px;
   }
 
-  &__link,
-  &__button {
+  &__link {
     margin: 5px;
     clear: left;
-  }
-
-  &__invisible-grid {
-    margin: 5px;
   }
 }
 
@@ -168,6 +163,12 @@
     width: 70%;
   }
 
+  &__text-inside-photo {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
   &__photo {
     display: block;
     width: 100%;
@@ -186,33 +187,25 @@
   }
 
   &__paragraph {
-    margin: 40px;
+    padding: 10px;
     text-align: justify;
     
     &--big-text {
       font-size: 24px;
     }
 
-    &--w-40 {
-      width: 80%;
-
-      @media (min-width: $tablet-viewport) {
-        width: 40%;
-      }
-    }
-
-    &--w-60 {
-      width: 80%;
-
-      @media (min-width: $tablet-viewport) {
-        width: 60%;
+    @for $i from 1 through $num-total-col {
+      &--w-#{$i} {
+        @media screen and (min-width: $tablet-viewport) {
+          width: column-width($i);
+        }
       }
     }
   }
 
   &__title {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     color: white;
     transform: translate(-50%, -50%);
