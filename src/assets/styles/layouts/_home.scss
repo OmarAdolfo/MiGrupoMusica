@@ -82,10 +82,21 @@
         grid-column: 5 / 5;
         writing-mode: vertical-rl;
       }
+      
+      &__location {
+        grid-row: 1;
+        grid-column: 3 / 5;
+        text-align: center;
+      }
   
       &__img {
         grid-row: 2 / 5;
         grid-column: 2 / 5;
+      }
+      
+      &__link {
+        grid-row: 3;
+        grid-column: 1; 
       }
   
       &__info {
