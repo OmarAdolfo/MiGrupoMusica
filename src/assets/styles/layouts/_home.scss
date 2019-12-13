@@ -58,9 +58,8 @@
     border-radius: 20px;
   }
 
-  &__link {
+  &__links {
     margin: 5px;
-    clear: left;
   }
 }
 
@@ -94,7 +93,7 @@
         grid-column: 2 / 5;
       }
       
-      &__link {
+      &__links {
         grid-row: 3;
         grid-column: 1;
       }
